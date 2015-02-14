@@ -4,7 +4,7 @@ var app = express();
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-var methosOverride = require('method-override');
+var methodOverride = require('method-override');
 
 // config
 mongoose.connect('mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu');
