@@ -28,3 +28,11 @@ console.log("App listening on port 8080");
 
     // api ---------------------------------------------------------------------
     // get all todos
+    app.get('/api/todos', function(req, res) {
+      Todo.find(function(err, todos) {
+        if (err)
+          res.send(err)
+
+        res.json(todos);
+      });
+    });
