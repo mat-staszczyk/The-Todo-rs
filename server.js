@@ -20,9 +20,9 @@ var Todo = mongoose.model('Todo', {
   text : String
 });
 
-// routes ======================================================================
+// routes
 
-    // api ---------------------------------------------------------------------
+    // api
     // get all todos
     app.get('/api/todos', function(req, res) {
       Todo.find(function(err, todos) {
@@ -69,6 +69,10 @@ var Todo = mongoose.model('Todo', {
        });
     });
 
+    // application
+    app.get('*', function(req, res) {
+      res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    });
 
 // listen
 app.listen(8080);
