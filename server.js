@@ -20,10 +20,6 @@ var Todo = mongoose.model('Todo', {
   text : String
 });
 
-// listen
-app.listen(8080);
-console.log("App listening on port 8080");
-
 // routes ======================================================================
 
     // api ---------------------------------------------------------------------
@@ -72,3 +68,8 @@ console.log("App listening on port 8080");
            });
        });
     });
+
+
+// listen
+app.listen(8080);
+console.log("App listening on port 8080");
