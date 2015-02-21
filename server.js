@@ -27,7 +27,7 @@ var Todo = mongoose.model('Todo', {
     app.get('/api/todos', function(req, res) {
       Todo.find(function(err, todos) {
         if (err)
-          res.send(err)
+          res.send(err);
 
         res.json(todos);
       });
@@ -45,7 +45,7 @@ var Todo = mongoose.model('Todo', {
 
         Todo.find(function(err, todos) {
           if (err)
-            res.send(err)
+            res.send(err);
           res.json(todos);
           });
         });
@@ -63,7 +63,7 @@ var Todo = mongoose.model('Todo', {
            // get and return all the todos after you create another
            Todo.find(function(err, todos) {
                if (err)
-                   res.send(err)
+                   res.send(err);
                res.json(todos);
            });
        });
