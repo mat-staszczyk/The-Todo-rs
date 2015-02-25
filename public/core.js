@@ -11,4 +11,16 @@ function mainController($scope, $http) {
       .error(function(data) {
         console.log('Error: ' + data);
       });
+
+      $scope.createTodo = function() {
+        $http.post('/api/todos', $scope.formData)
+          .success(function(data) {
+            $scope.formData = {};
+            $scope.todos = data;
+            console.log(data);
+          })
+          .error(function(data {
+            console.log('Error: ' + data);
+          });
+      };
 }
